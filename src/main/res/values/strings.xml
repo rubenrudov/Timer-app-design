@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kosher Timer</string>
+    <string name="hours">Enter hours:</string>
+    <string name="minutes">Enter minutes:</string>
+    <string name="seconds">Enter seconds: </string>
+    <string name="time_left">Time left: </string>
+    <string name="done">done!</string>
+    <string name="notification_title">It\'s Kosher Time</string>
+    <string name="notification_text">You can eat now</string>
+    <string name="counting">counting time</string>
+</resources>
