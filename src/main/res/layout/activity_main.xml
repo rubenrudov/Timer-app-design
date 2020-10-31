@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:padding="15dp"
-        android:background="@drawable/bg"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="15dp"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <com.google.android.material.textfield.TextInputLayout
         style="@style/LoginTextInputLayoutStyle"
         android:layout_width="match_parent"
@@ -20,8 +20,62 @@
         <com.google.android.material.textfield.TextInputEditText
             android:foregroundTint="@color/white"
             android:backgroundTint="@color/white"
+            android:layout_marginTop="12dp"
+            app:hintTextAppearance="@style/TextLabel"
             android:layout_marginVertical="15dp"
             android:id="@+id/hours"
+            android:layout_width="match_parent"
+            android:background="@null"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberSigned"
+            android:paddingHorizontal="15dp"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/LoginTextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/white"
+        android:hint="@string/minutes"
+        app:hintTextAppearance="@color/white"
+        android:theme="@style/LoginTextInputLayoutStyle"
+        app:boxStrokeColor="@color/white">
+        <com.google.android.material.textfield.TextInputEditText
+            android:foregroundTint="@color/white"
+            android:backgroundTint="@color/white"
+            android:layout_marginVertical="15dp"
+            android:id="@+id/mints"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:background="@null"
+            android:inputType="numberSigned"
+            android:paddingHorizontal="15dp"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/LoginTextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@color/white"
+        android:foregroundTint="@color/white"
+        android:hint="@string/seconds"
+        app:hintTextAppearance="@color/white"
+        android:theme="@style/LoginTextInputLayoutStyle"
+        app:boxStrokeColor="@color/white"
+        android:background="@null">
+        <com.google.android.material.textfield.TextInputEditText
+            android:foregroundTint="@color/white"
+            android:backgroundTint="@color/white"
+            android:background="@android:color/transparent"
+            android:layout_marginVertical="15dp"
+            android:id="@+id/secs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -31,106 +85,56 @@
             android:textSize="22sp"
             android:autofillHints="" />
     </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/LoginTextInputLayoutStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/white"
-            android:hint="@string/minutes"
-            app:hintTextAppearance="@color/white"
-            android:theme="@style/LoginTextInputLayoutStyle"
-            app:boxStrokeColor="@color/white">
-            <com.google.android.material.textfield.TextInputEditText
-                android:foregroundTint="@color/white"
-                android:backgroundTint="@color/white"
-                android:layout_marginVertical="15dp"
-                android:id="@+id/mints"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="numberSigned"
-                android:paddingHorizontal="15dp"
-                android:textColor="@color/white"
-                android:textSize="22sp"
-                android:autofillHints="" />
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/LoginTextInputLayoutStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/white"
-            android:backgroundTint="@color/white"
-            android:foregroundTint="@color/white"
-            android:hint="@string/seconds"
-            app:hintTextAppearance="@color/white"
-            android:theme="@style/LoginTextInputLayoutStyle"
-            app:boxStrokeColor="@color/white"
-            android:background="@null">
-            <com.google.android.material.textfield.TextInputEditText
-                android:foregroundTint="@color/white"
-                android:backgroundTint="@color/white"
-                android:background="@android:color/transparent"
-                android:layout_marginVertical="15dp"
-                android:id="@+id/secs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="numberSigned"
-                android:paddingHorizontal="15dp"
-                android:textColor="@color/white"
-                android:textSize="22sp"
-                android:autofillHints="" />
-        </com.google.android.material.textfield.TextInputLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
         <LinearLayout
             android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-        <RelativeLayout
-            android:layout_marginBottom="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageButton
-                android:id="@+id/start_clock"
+            <RelativeLayout
+                android:layout_marginBottom="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginStart="105dp"
-                android:background="@null"
-                android:onClick="start_timer"
-                app:srcCompat="@drawable/play"
-                tools:ignore="VectorDrawableCompat"
-                android:layout_centerHorizontal="true"
-                tools:layout_editor_absoluteX="90dp"
-                tools:layout_editor_absoluteY="65dp" />
-        </RelativeLayout>
-        <RelativeLayout
-            android:paddingVertical="2dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            >
-            <ImageButton
-                android:id="@+id/stop_clock"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/start_clock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="105dp"
+                    android:background="@null"
+                    android:onClick="start_timer"
+                    app:srcCompat="@drawable/play"
+                    tools:ignore="VectorDrawableCompat"
+                    android:layout_centerHorizontal="true"
+                    tools:layout_editor_absoluteX="90dp"
+                    tools:layout_editor_absoluteY="65dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:paddingVertical="2dp"
                 android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginStart="105dp"
-                android:background="@null"
-                android:onClick="start_timer"
-                app:srcCompat="@drawable/pause"
-                tools:ignore="VectorDrawableCompat"
-                android:layout_centerHorizontal="true"
-                tools:layout_editor_absoluteX="90dp"
-                tools:layout_editor_absoluteY="65dp" />
-        </RelativeLayout>
+                android:layout_height="wrap_content"
+                >
+                <ImageButton
+                    android:id="@+id/stop_clock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="105dp"
+                    android:background="@null"
+                    android:onClick="start_timer"
+                    app:srcCompat="@drawable/pause"
+                    tools:ignore="VectorDrawableCompat"
+                    android:layout_centerHorizontal="true"
+                    tools:layout_editor_absoluteX="90dp"
+                    tools:layout_editor_absoluteY="65dp" />
+            </RelativeLayout>
         </LinearLayout>
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent">
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
         <TextView
             android:layout_centerHorizontal="true"
             android:id="@+id/timeLeftTv"
@@ -152,5 +156,5 @@
             android:text="@string/done"
             android:textColor="@color/white"
             android:textSize="30sp"/>
-        </RelativeLayout>
-    </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
